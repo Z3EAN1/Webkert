@@ -1,0 +1,51 @@
+
+   <span class="card-content">
+    
+   <mat-card>Új szolgáltatás felvétele</mat-card>
+   <div class="card">
+     <div class="">  
+       <h2 class="card-title">Add meg a szolgáltatás adatait</h2>
+       <form (ngSubmit)="add()" class="btn">
+         <div class="row">
+           <!--Nev-->
+           <div>
+           <mat-form-field appearance="fill">
+             <br><mat-label>Szolgáltatás neve</mat-label><br>
+             <input matInput placeholder="Név" [(ngModel)]="service.name" name="name" >
+           </mat-form-field>
+         </div>
+         <!--Category-->
+         <div>
+           <mat-form-field appearance="fill">
+             <mat-label>Szolgáltatás kategória</mat-label><br>
+             <input matInput  placeholder="pl. fogszabályzás" [(ngModel)]="service.category" name="category">
+           </mat-form-field>
+         </div>
+         <!--Comment-->
+         <div>
+           <mat-form-field appearance="fill">
+             <mat-label>Szolgáltatás leírása</mat-label><br>
+             <input matInput  placeholder="Leírása" [(ngModel)]="service.comment" name="comment">
+           </mat-form-field>
+         </div>
+         <!--ExtraDetail-->
+        <div>
+           <mat-form-field appearance="fill">
+             <mat-label>Szolgáltatásra jellemző egyéb dolog</mat-label><br>
+             <input matInput placeholder="Egyéb" [(ngModel)]="service.extraDetail" name="extraDetail">
+           </mat-form-field>
+           <br>
+         </div>
+           <button mat-raised-button class="btn">Hozzáad</button>
+         </div>
+         <br>
+       </form>
+     </div>
+   </div>
+   
+   
+   
+   </span>
+    
+ 
+  

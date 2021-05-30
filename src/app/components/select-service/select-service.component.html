@@ -1,0 +1,15 @@
+<div>
+    <mat-card-title>Fogszabályzás</mat-card-title>
+  <div><table mat-table class="table table-hover">
+    <tbody>
+      <tr *ngFor="let healtcaresevice of healtcaresevices "><mat-card class="table"><div>
+        <td mat-cell> {{healtcaresevice.name}}</td>
+        <td mat-cell> {{healtcaresevice.category}}</td>
+        <td mat-cell> {{healtcaresevice.comment}}</td>
+        <td mat-cell> {{healtcaresevice.extraDetail}}</td>
+      </div>
+      </mat-card> 
+    </tr>
+      
+    </tbody>
+  </table></div> 

@@ -1,0 +1,80 @@
+<!--Táblázat-->
+<div>
+  <mat-card-title>Szolgáltatások</mat-card-title>
+<div><table mat-table class="table table-hover">
+  <tbody>
+    <tr *ngFor="let healtcaresevice of healtcaresevices " ><mat-card class="table"><div>
+      <!--Nev-->
+      <ng-container>
+      <td mat-cell> {{healtcaresevice.name}} </td>
+    </ng-container>
+    <!--Category-->
+    <ng-container>
+      <td mat-cell> {{healtcaresevice.category}} </td>
+    </ng-container>
+    <!--Comment-->
+    <ng-container>
+      <td mat-cell> {{healtcaresevice.comment}}  </td>
+    </ng-container>
+    <!--ExtraDetail-->
+    <ng-container>
+      <td mat-cell> {{healtcaresevice.extraDetail}}</td>
+    </ng-container>
+      <!--Törlés gomb-->
+      <td><button mat-raised-button (click)="onDelete($event, healtcaresevice)" class = "deletebtn">Törlés</button></td>
+      <!--Módosítás gomb-->
+      <td><button mat-raised-button (click)="onEdit($event, healtcaresevice)" class = "editbtn">Módosít</button></td>
+    </div>
+    </mat-card>
+    <!--Módosítás-->
+    <div *ngIf = "editState && serviceToEdit.id == healtcaresevice.id" class="update">
+      <form (ngSubmit)="onUpdate($event, healtcaresevice)" class="btn">
+        <div class="row">
+          <!--Nev-->
+          <div>
+          <mat-form-field appearance="fill">
+            <br><mat-label>Szolgáltatás neve</mat-label><br>
+            <input matInput placeholder="Név" [(ngModel)]="healtcaresevice.name" name="name" >
+          </mat-form-field>
+        </div>
+        <!--Category-->
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Szolgáltatás kategória</mat-label><br>
+            <input matInput  placeholder="pl. fogszabályzás" [(ngModel)]="healtcaresevice.category" name="category">
+          </mat-form-field>
+        </div>
+        <!--Comment-->
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Szolgáltatás leírása</mat-label><br>
+            <input matInput  placeholder="Leírása" [(ngModel)]="healtcaresevice.comment" name="comment">
+          </mat-form-field>
+        </div>
+        <!--ExtraDetail-->
+       <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Szolgáltatásra jellemző egyéb dolog</mat-label><br>
+            <input matInput placeholder="Egyéb" [(ngModel)]="healtcaresevice.extraDetail" name="extraDetail">
+          </mat-form-field>
+          <br>
+        </div>
+          <button mat-raised-button class="btn">Módosít</button>
+        </div>
+        <br>
+      </form>
+    </div> 
+    
+  </tr>
+    
+  </tbody>
+</table></div> <br>
+
+<!--Hozzáadás-->
+<app-add-healtcareservices></app-add-healtcareservices>
+
+
+
+
+
+  

@@ -1,0 +1,56 @@
+
+mat-form-field{
+    background-color: #d6d6c2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  
+  }
+  
+  mat-label{
+    color: black;
+  }
+  .card-content{
+    background-color: #476b6b;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  .btn{
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input {
+    color:black;
+    
+  }
+  ::placeholder{
+    color:#996666;
+  }
+  .card-title{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+  table{
+    padding: 3px;
+  }
+  mat-card-title{
+    color: #334d4d;
+    font-size: 24px;
+  }
+  .table{
+    height:25px;
+  }
+  .deletebtn{
+    background-color:grey;
+    color:black;
+  }
+  
